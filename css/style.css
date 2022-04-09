@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.hide {
+    opacity: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.pointer {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(0 106 250 / 80%);
+    width: 100px;
+    height: 100px;
+    transition: opacity 500ms ease;
+    border-radius: 100%;
+    animation-name: wave;
+    transform: translate(-50%, -50%);
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes wave {
+    0% {
+        box-shadow: 0 0 0 0px #586fad;
+    }
+    100% {
+        box-shadow: 0 0 7px 30px #586fad;
+    }
+}
+
+#stage {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    z-index: 1;
+    box-shadow: 0 0 10px 20px #e7a0a0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: calc(1vw *1.5*4);
+    font-family: Ubuntu, sans-serif;
+}
+
+#stage:after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: calc(1vw *1.5*4);
+    vertical-align: text-top;
+    margin-left: 5px;
+    background-color: black;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
