@@ -1,6 +1,6 @@
 var texts = [
     'Hello Everyone!',
-    'I am Chamal Peiris',
+    'I am chamal peiris',
     'A full stack developer',
     'Holding a Bsc(Hons) degree in software engineering',
     'Hailing from moratuwa!'
